@@ -4,6 +4,7 @@ import ProductCard from "../components/ProductCard";
 import CookieModal from "../components/CookieModal";
 import "./Cookies.css";
 
+
 function Cookies() {
 
     const [showAll, setShowAll] = useState(false);
