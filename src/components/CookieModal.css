@@ -1,0 +1,222 @@
+/* =========================================
+   COOKIE MODAL
+========================================= */
+
+.cookie-modal {
+    width: min(900px, 100%);
+}
+
+
+/* =========================================
+   COOKIE IMAGE
+========================================= */
+
+.cookie-modal .modal-image {
+    background: #eadbd0;
+    overflow: hidden;
+}
+
+.cookie-modal .modal-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.cookie-modal:hover .modal-image img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   COOKIE CATEGORY
+========================================= */
+
+.cookie-modal .modal-category {
+    color: #a55d3d;
+}
+
+
+/* =========================================
+   COOKIE RATING
+========================================= */
+
+.cookie-modal .modal-rating {
+    background: #f2dfd4;
+}
+
+
+/* =========================================
+   WEIGHT OPTIONS
+========================================= */
+
+.cookie-modal .weight-options {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.cookie-modal .weight-btn {
+    min-width: 62px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #d8c2b5;
+
+    border-radius: 25px;
+
+    background: transparent;
+
+    color: #4b332c;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   WEIGHT HOVER
+========================================= */
+
+.cookie-modal .weight-btn:hover {
+    background: #f4e4d9;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SELECTED WEIGHT
+========================================= */
+
+.cookie-modal .weight-btn.active {
+    background: #5a3025;
+
+    color: #ffffff;
+
+    border-color: #5a3025;
+
+    box-shadow:
+        0 7px 18px rgba(90, 48, 37, 0.2);
+}
+
+
+/* =========================================
+   COOKIE PRICE
+========================================= */
+
+.cookie-modal .modal-price {
+    margin-bottom: 25px;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    color: #a55d3d;
+}
+
+.cookie-modal .modal-price span {
+    margin-left: 5px;
+
+    font-size: 13px;
+
+    color: #806c64;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ORDER BUTTON
+========================================= */
+
+.cookie-modal .modal-order-btn {
+    background: #5a3025;
+}
+
+.cookie-modal .modal-order-btn:hover {
+    background: #6b3a2d;
+
+    box-shadow:
+        0 15px 30px rgba(90, 48, 37, 0.25);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .cookie-modal {
+        width: 100%;
+    }
+
+    .cookie-modal .weight-options {
+        gap: 8px;
+    }
+
+    .cookie-modal .weight-btn {
+        padding: 9px 13px;
+
+        min-width: 58px;
+    }
+
+    .cookie-modal .modal-price {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .cookie-modal .weight-options {
+        gap: 7px;
+    }
+
+    .cookie-modal .weight-btn {
+        padding: 8px 11px;
+
+        font-size: 11px;
+    }
+
+    .cookie-modal .modal-price {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .cookie-modal .weight-btn {
+        padding: 8px 10px;
+
+        min-width: 55px;
+    }
+}

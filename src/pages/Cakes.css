@@ -1,0 +1,227 @@
+.cakes-section{
+    padding: 100px 7%;
+    background: #fffaf5;
+}
+.section-heading{
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+.section-small-title{
+    color: #b8754b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+.section-heading h2{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 400;
+    color: #3a211c;
+    margin-bottom: 15px;
+}
+.section-heading p{
+    color: #806c64;
+    line-height: 1.7;
+}
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+.show-more-btn{
+    display: block;
+    margin: 50px auto 0;
+    padding: 14px 30px;
+    border: 1px solid #d8b7a4;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    color: #3a211c;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.show-more-btn:hover{
+    background: #3a211c;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(58, 33, 28, 0.15);
+}
+@media (max-width: 768px){
+    .products-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .cakes-section{
+        padding: 70px 6%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= CUSTOM CAKE ================= */
+
+.custom-cake-card{
+    max-width: 1200px;
+    margin: 70px auto 0;
+    min-height: 360px;
+    padding: 50px 60px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        135deg,
+        #3a211c,
+        #6b4034
+    );  
+    box-shadow: 0 25px 60px rgba(58, 33, 28, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.custom-cake-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(58, 33, 28, 0.28);
+}
+.custom-cake-content{
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+}
+.custom-cake-badge{
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #f3d4b7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.custom-cake-content h3{
+    margin: 0 0 18px;
+    color: white;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+.custom-cake-content h3 span{
+    color: #e7b68d;
+    font-style: italic;
+}
+.custom-cake-content p{
+    max-width: 480px;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    line-height: 1.8;
+}
+.custom-cake-btn{
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: #f3d4b7;
+    color: #3a211c;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+.custom-cake-btn:hover{
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.custom-cake-decoration{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-circle{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    animation: floatingCake 4s ease-in-out infinite;
+}
+.sparkle{
+    position: absolute;
+    color: #f3d4b7;
+    font-size: 28px;
+    animation: sparkleAnimation 2s ease-in-out infinite;
+}
+.sparkle-one{
+    top: 30px;
+    right: 30px;
+}
+.sparkle-two{
+    bottom: 40px;
+    left: 30px;
+    font-size: 20px;
+}
+.sparkle-three{
+    top: 80px;
+    left: 10px;
+    font-size: 16px;
+}
+@keyframes floatingCake{
+    0%,
+    100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+@keyframes sparkleAnimation{
+    0%,
+    100%{
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 700px){
+    .custom-cake-card{
+        padding: 40px 25px;
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .custom-cake-content p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .custom-cake-decoration{
+        width: 220px;
+        height: 220px;
+    }
+    .custom-circle{
+        width: 160px;
+        height: 160px;
+        font-size: 70px;
+    }
+}

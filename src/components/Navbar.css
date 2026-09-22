@@ -1,0 +1,652 @@
+/* =========================================================
+   PREMIUM CAANA CAKES NAVBAR
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#cakes,
+#brownies,
+#cookies,
+#contact {
+    scroll-margin-top: 115px;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    background: rgba(250, 247, 242, 0.94);
+
+    border-bottom: 1px solid rgba(70, 50, 30, 0.09);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 8px 35px rgba(40, 30, 20, 0.05);
+}
+
+/* =========================================================
+   LOGO AREA
+========================================================= */
+
+.navbar-logo {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.navbar-logo img {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 50%;
+
+    mix-blend-mode: multiply;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.06);
+}
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+}
+
+.brand-main {
+    color: #211b16;
+
+    /*
+       Elegant premium serif font
+    */
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+.brand-sub {
+    margin-top: 7px;
+
+    color: #a97b42;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-left: auto;
+    margin-right: 35px;
+}
+
+.nav-section-btn {
+    position: relative;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #5e554d;
+
+    padding: 14px 18px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* underline */
+
+.nav-section-btn::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: #a97b42;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+}
+
+.nav-section-btn:hover {
+    color: #a97b42;
+
+    transform: translateY(-2px);
+}
+
+.nav-section-btn:hover::after {
+    width: 25px;
+}
+
+/* =========================================================
+   ORDER BUTTON
+========================================================= */
+
+.order-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 54px;
+
+    padding: 0 27px;
+
+    border-radius: 100px;
+
+    background: #211b16;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    box-shadow:
+        0 10px 25px rgba(33, 27, 22, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.order-btn span {
+    font-size: 19px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background: #a97b42;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 32px rgba(120, 85, 45, 0.25);
+}
+
+.order-btn:hover span {
+    transform: translateX(5px);
+}
+
+/* =========================================================
+   MOBILE ORDER BUTTON
+========================================================= */
+
+.mobile-order-btn {
+    display: none;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 50px;
+    height: 50px;
+
+    margin-left: auto;
+
+    border: 1px solid rgba(50, 40, 30, 0.12);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #fff;
+
+    transform: scale(1.04);
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 21px;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #302820;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* =========================================================
+   HAMBURGER ANIMATION
+========================================================= */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 3.5%;
+    }
+
+    .navbar-logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .brand-main {
+        font-size: 31px;
+    }
+
+    .nav-links {
+        gap: 2px;
+        margin-right: 20px;
+    }
+
+    .nav-section-btn {
+        padding: 13px 13px;
+
+        font-size: 14px;
+    }
+
+    .order-btn {
+        padding: 0 22px;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        height: 90px;
+    }
+
+    .navbar-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .brand-main {
+        font-size: 28px;
+    }
+
+    .brand-sub {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+
+    .nav-links {
+        gap: 0;
+        margin-right: 12px;
+    }
+
+    .nav-section-btn {
+        padding: 10px 9px;
+        font-size: 12px;
+    }
+
+    .order-btn {
+        min-height: 48px;
+        padding: 0 17px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 82px;
+
+        padding: 0 22px;
+    }
+
+    .navbar-logo {
+        gap: 12px;
+    }
+
+    .navbar-logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .brand-main {
+        font-size: 27px;
+    }
+
+    .brand-sub {
+        margin-top: 5px;
+
+        font-size: 8px;
+
+        letter-spacing: 3.5px;
+    }
+
+    /* hide desktop links */
+
+    .nav-links {
+        position: absolute;
+
+        top: calc(100% + 12px);
+
+        left: 15px;
+        right: 15px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        margin: 0;
+
+        padding: 16px;
+
+        background: rgba(255, 252, 248, 0.98);
+
+        border:
+            1px solid rgba(60, 45, 30, 0.10);
+
+        border-radius: 22px;
+
+        box-shadow:
+            0 22px 50px rgba(40, 30, 20, 0.14);
+
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-12px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .nav-section-btn {
+        width: 100%;
+
+        padding: 16px 18px;
+
+        text-align: left;
+
+        border-radius: 13px;
+
+        font-size: 15px;
+    }
+
+    .nav-section-btn:hover {
+        background: #f3ebdf;
+
+        transform: none;
+    }
+
+    .nav-section-btn::after {
+        display: none;
+    }
+
+    /* mobile order */
+
+    .mobile-order-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        margin-top: 7px;
+
+        padding: 15px;
+
+        border-radius: 13px;
+
+        background: #211b16;
+
+        color: #fff;
+
+        text-decoration: none;
+
+        font-family:
+            "Montserrat",
+            Arial,
+            sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 700;
+    }
+
+    .mobile-order-btn span {
+        font-size: 18px;
+    }
+
+    /* hide desktop order */
+
+    .order-btn {
+        display: none;
+    }
+
+    /* hamburger */
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 76px;
+
+        padding: 0 16px;
+    }
+
+    .navbar-logo {
+        gap: 9px;
+    }
+
+    .navbar-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-main {
+        font-size: 24px;
+    }
+
+    .brand-sub {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+    }
+
+    .menu-toggle {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .navbar-logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-main {
+        font-size: 21px;
+    }
+
+    .brand-sub {
+        font-size: 6px;
+        letter-spacing: 2.5px;
+    }
+
+    .menu-toggle {
+        width: 43px;
+        height: 43px;
+    }
+}

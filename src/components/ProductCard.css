@@ -1,0 +1,409 @@
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+    background: #fffdfb;
+    border: 1px solid rgba(80, 40, 20, 0.08);
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(60, 35, 20, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(60, 35, 20, 0.13);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image-container {
+    position: relative;
+
+    width: 100%;
+    height: 270px;
+
+    overflow: hidden;
+
+    background: #f3e5dc;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.product-card:hover .product-image {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.rating {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 8px 12px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #4a332b;
+
+    box-shadow:
+        0 5px 15px rgba(50, 30, 20, 0.08);
+}
+
+
+.rating-star {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
+
+.product-info {
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.product-info h3 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #3a211c;
+
+    margin: 0 0 10px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.product-description {
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    color: #806c64;
+
+    margin: 0 0 18px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BOTTOM AREA
+========================================= */
+
+.product-bottom {
+    margin-top: auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 75px;
+}
+
+
+.starting-text {
+    font-size: 10px;
+
+    color: #927e75;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    font-weight: 600;
+}
+
+
+.product-price {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #b8754b;
+}
+
+
+/* =========================================
+   VIEW DETAILS BUTTON
+========================================= */
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border: 1px solid #d8b7a4;
+
+    border-radius: 30px;
+
+    background: transparent;
+
+    color: #3a211c;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.view-btn span {
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.view-btn:hover {
+    background: #3a211c;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.view-btn:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .product-image-container {
+        height: 240px;
+    }
+
+    .product-info {
+        padding: 19px;
+    }
+
+    .product-info h3 {
+        font-size: 22px;
+    }
+
+    .product-description {
+        font-size: 13px;
+    }
+
+    .product-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .product-card {
+        border-radius: 20px;
+    }
+
+    .product-image-container {
+        height: 250px;
+    }
+
+    .product-info {
+        padding: 18px;
+    }
+
+    .product-info h3 {
+        font-size: 22px;
+    }
+
+    .product-description {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    .product-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .view-btn {
+        width: auto;
+        padding: 10px 15px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .product-image-container {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 16px;
+    }
+
+    .product-info h3 {
+        font-size: 20px;
+    }
+
+    .product-description {
+        font-size: 12px;
+    }
+
+    .starting-text {
+        font-size: 9px;
+    }
+
+    .product-price {
+        font-size: 19px;
+    }
+
+    .view-btn {
+        padding: 9px 13px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-info h3 {
+        font-size: 19px;
+    }
+
+    .product-bottom {
+        gap: 10px;
+    }
+
+    .view-btn {
+        padding: 9px 11px;
+    }
+}

@@ -1,0 +1,783 @@
+/* =========================================
+   ORDER PAGE
+========================================= */
+
+.order-section {
+    min-height: 100vh;
+
+    padding: 120px 7% 80px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(214, 168, 137, 0.15),
+            transparent 35%
+        ),
+        #fffaf5;
+}
+
+
+/* =========================================
+   ORDER CONTAINER
+========================================= */
+
+.order-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(80, 40, 20, 0.08);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(60, 35, 20, 0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* =========================================
+   ORDER HEADER
+========================================= */
+
+.order-header {
+    text-align: center;
+
+    margin-bottom: 38px;
+}
+
+.order-header p {
+    margin: 0 0 12px;
+
+    color: #b8754b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.order-header h1 {
+    margin: 0 0 12px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(40px, 6vw, 58px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    color: #3a211c;
+}
+
+.order-header span {
+    color: #806c64;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SELECTED PRODUCT
+========================================= */
+
+.selected-product-info {
+    position: relative;
+
+    margin-bottom: 32px;
+
+    padding: 22px 24px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 228, 217, 0.72),
+            rgba(255, 250, 245, 0.9)
+        );
+
+    border: 1px solid rgba(184, 117, 75, 0.15);
+
+    box-shadow:
+        0 8px 25px rgba(60, 35, 20, 0.04);
+}
+
+.selected-product-label {
+    margin: 0 0 8px;
+
+    color: #b8754b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.selected-product-info h3 {
+    margin: 0 0 14px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #3a211c;
+}
+
+.selected-product-details {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.selected-product-details span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #806c64;
+
+    border: 1px solid rgba(80, 40, 20, 0.07);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.selected-product-details strong {
+    margin-left: auto;
+
+    color: #b8754b;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ORDER FORM
+========================================= */
+
+.order-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    color: #4b332c;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dfc9bc;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #3a211c;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ad9990;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b8754b;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(184, 117, 75, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 110px;
+}
+
+
+/* =========================================
+   SMALL FORM HELP TEXT
+========================================= */
+
+.form-group small {
+    font-size: 11px;
+
+    color: #927e75;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DATE + TIME ROW
+========================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   DELIVERY INFORMATION
+========================================= */
+
+.delivery-info {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px 18px;
+
+    border-radius: 16px;
+
+    background: #f7eee8;
+
+    border: 1px solid rgba(184, 117, 75, 0.12);
+}
+
+.delivery-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fffaf5;
+
+    font-size: 19px;
+
+    box-shadow:
+        0 5px 15px rgba(60, 35, 20, 0.06);
+}
+
+.delivery-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #4b332c;
+
+    font-size: 13px;
+}
+
+.delivery-info p {
+    margin: 0;
+
+    color: #806c64;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   WHATSAPP ORDER BUTTON
+========================================= */
+
+.whatsapp-order-btn {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #3a211c;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.whatsapp-order-btn:hover {
+    transform: translateY(-3px);
+
+    background: #4a2a23;
+
+    box-shadow:
+        0 15px 30px rgba(58, 33, 28, 0.22);
+}
+
+.whatsapp-order-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ==========================================
+   CLOSE ORDER BUTTON
+========================================== */
+
+.close-order-btn {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+
+    background: transparent;
+    color: #555;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.close-order-btn:hover {
+    background: #f5f5f5;
+    border-color: #999;
+    color: #222;
+
+    transform: translateY(-2px);
+}
+
+.close-order-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   PRODUCT SELECTION
+========================================== */
+
+.product-selection {
+    margin-bottom: 30px;
+    padding: 28px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.selection-title {
+    margin-bottom: 24px;
+}
+
+.selection-title p {
+    margin: 0 0 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.selection-title h2 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+
+/* ==========================================
+   SELECT DROPDOWNS
+========================================== */
+
+.product-selection select {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+
+    background: #fff;
+
+    font-size: 16px;
+    color: #333;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-selection select:focus {
+    border-color: #777;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================================
+   SELECTED PRICE
+========================================== */
+
+.order-price-box {
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 14px;
+
+    background: #f8f5f0;
+}
+
+.order-price-box span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+.order-price-box strong {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .order-section {
+        padding: 110px 5% 70px;
+    }
+
+    .order-container {
+        padding: 42px;
+    }
+
+    .order-header h1 {
+        font-size: 48px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .order-section {
+        padding: 100px 5% 50px;
+    }
+
+    .order-container {
+        padding: 30px 20px;
+
+        border-radius: 22px;
+    }
+
+    .order-header {
+        margin-bottom: 30px;
+    }
+
+    .order-header p {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .order-header h1 {
+        font-size: 38px;
+    }
+
+    .order-header span {
+        font-size: 13px;
+    }
+
+    .selected-product-info {
+        padding: 19px;
+
+        margin-bottom: 26px;
+    }
+
+    .selected-product-info h3 {
+        font-size: 24px;
+    }
+
+    .selected-product-details {
+        align-items: flex-start;
+    }
+
+    .selected-product-details strong {
+        margin-left: 0;
+
+        width: 100%;
+
+        font-size: 19px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .delivery-info {
+        padding: 15px;
+    }
+
+    .whatsapp-order-btn {
+        padding: 15px;
+    }
+
+        .product-selection {
+        padding: 22px 18px;
+    }
+
+    .selection-title h2 {
+        font-size: 24px;
+    }
+
+    .product-selection select {
+        font-size: 15px;
+        padding: 14px 15px;
+    }
+
+    .order-price-box {
+        padding: 16px;
+    }
+
+    .order-price-box strong {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .order-section {
+        padding: 90px 4% 40px;
+    }
+
+    .order-container {
+        padding: 25px 16px;
+
+        border-radius: 20px;
+    }
+
+    .order-header h1 {
+        font-size: 32px;
+    }
+
+    .order-header span {
+        font-size: 12px;
+    }
+
+    .selected-product-info {
+        padding: 17px;
+    }
+
+    .selected-product-info h3 {
+        font-size: 21px;
+    }
+
+    .selected-product-details span {
+        font-size: 11px;
+
+        padding: 6px 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 13px;
+    }
+
+    .delivery-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 17px;
+    }
+
+    .delivery-info strong {
+        font-size: 12px;
+    }
+
+    .delivery-info p {
+        font-size: 11px;
+    }
+
+    .whatsapp-order-btn {
+        font-size: 13px;
+    }
+
+        .product-selection {
+        padding: 18px 15px;
+        border-radius: 18px;
+    }
+
+    .selection-title h2 {
+        font-size: 21px;
+    }
+
+    .selection-title p {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .product-selection select {
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .order-price-box {
+        margin-top: 16px;
+        padding: 14px;
+    }
+
+    .order-price-box span {
+        font-size: 14px;
+    }
+
+    .order-price-box strong {
+        font-size: 20px;
+    }
+
+    .close-order-btn,
+    .whatsapp-order-btn {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .order-container {
+        padding: 22px 14px;
+    }
+
+    .order-header h1 {
+        font-size: 29px;
+    }
+
+    .selected-product-info h3 {
+        font-size: 20px;
+    }
+
+    .selected-product-details {
+        gap: 7px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+    }
+}
